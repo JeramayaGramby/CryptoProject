@@ -2,33 +2,49 @@
 import pandas as pd
 from pathlib import Path
 
-'''Stablecoin'''
-'''
-DAI = pathlib.Path('DGD-USD.csv')
-DGD = pathlib.Path('DGD-USD.csv')
-GUSD = pathlib.Path('GUSD-USD.csv')
-SBD = pathlib.Path('SBD-USD.csv')
-SHX = pathlib.Path('SHX-USD.csv')
-SUSD = pathlib.Path('SUSD-USD.csv')
-TUSD = pathlib.Path('TUSD-USD.csv')
-USDC = pathlib.Path('USDC-USD.csv')
-USDP = pathlib.Path('USDP-USD.csv')
-USDT = pathlib.Path('USDT-USD.csv')
-'''
+'''Drop all tables except for close through sorting'''
+'''Merge all tables into their respective data sets'''
+
+'''Stablecoin Data'''
+
+DAI = Path.home() / 'CryptoAnalysis' / 'Stablecoin_Historical_Data' / 'DAI-USD.csv'
+DGD = Path.home() / 'CryptoAnalysis' / 'Stablecoin_Historical_Data' / 'DGD-USD.csv'
+GUSD = Path.home() / 'CryptoAnalysis' / 'Stablecoin_Historical_Data' / 'GUSD-USD.csv'
+SBD = Path.home() / 'CryptoAnalysis' / 'Stablecoin_Historical_Data' / 'SBD-USD.csv'
+SHX = Path.home() / 'CryptoAnalysis' / 'Stablecoin_Historical_Data' / 'SHX-USD.csv'
+SUSD = Path.home() / 'CryptoAnalysis' / 'Stablecoin_Historical_Data' / 'SUSD-USD.csv'
+TUSD = Path.home() / 'CryptoAnalysis' / 'Stablecoin_Historical_Data' / 'TUSD-USD.csv'
+USDC = Path.home() / 'CryptoAnalysis' / 'Stablecoin_Historical_Data' / 'USDC-USD.csv'
+USDP = Path.home() / 'CryptoAnalysis' / 'Stablecoin_Historical_Data' / 'USDP-USD.csv'
+USDT = Path.home() / 'CryptoAnalysis' / 'Stablecoin_Historical_Data' / 'USDT-USD.csv'
 
 '''S&P 500 Data'''
-AAPL = Path('AAPL.csv')
+AAPL = Path.home() / 'CryptoAnalysis' / 'SP_500_Top_10_Data' / 'AAPL.csv'
+AMZN = Path.home() / 'CryptoAnalysis' / 'SP_500_Top_10_Data' / 'AMZN.csv'
+BRKB = Path.home() / 'CryptoAnalysis' / 'SP_500_Top_10_Data' / 'BRK-B.csv'
+GOOG = Path.home() / 'CryptoAnalysis' / 'SP_500_Top_10_Data' / 'GOOG.csv'
+GOOGL = Path.home() / 'CryptoAnalysis' / 'SP_500_Top_10_Data' / 'GOOGL.csv'
+META = Path.home() / 'CryptoAnalysis' / 'SP_500_Top_10_Data' / 'META.csv'
+MSFT = Path.home() / 'CryptoAnalysis' / 'SP_500_Top_10_Data' / 'MSFT.csv'
+NVDA = Path.home() / 'CryptoAnalysis' / 'SP_500_Top_10_Data' / 'NVDA.csv'
+TSLA = Path.home() / 'CryptoAnalysis' / 'SP_500_Top_10_Data' / 'TSLA.csv'
+UNH = Path.home() / 'CryptoAnalysis' / 'SP_500_Top_10_Data' / 'UNH.csv'
 
-'''AMZN = pathlib.Path('AMZN.csv')
-BRKB = pathlib.Path('BRK-B.csv')
-GOOG = pathlib.Path('GOOG.csv')
-GOOGL = pathlib.Path('GOOGL.csv')
-META = pathlib.Path('META.csv')
-MSFT = pathlib.Path('MSFT.csv')
-NVDA = pathlib.Path('NVDA.csv')
-TSLA = pathlib.Path('TSLA.csv')
-UNH = pathlib.Path('UNH.csv')
-'''
+SP_500_List = list([AAPL,AMZN,BRKB,GOOG,GOOGL,META,MSFT,NVDA,TSLA,UNH])
+for item in SP_500_List:
+    result = pd.read_csv(item)
+    print(result)
+
+stablecoin_List = list([DAI,DGD,GUSD,SBD,SHX,SUSD,TUSD,USDC,USDP,USDT])
+for item in stablecoin_List:
+    result = pd.read_csv(item)
+    print(result)
+
+'''SP_500_Top_10_Data = pd.concat(map(pd.read_csv, 'AAPL','AMZN','BRKB','GOOG','GOOGL','META','MSFT','NVDA','TSLA','UNH'))
+print(SP_500_Top_10_Data)'''
+'''Stablecoin_Historical_Data = pd.concat(map(pd.read_csv, DAI,DGD,GUSD,SBD,SHX,SUSD,
+TUSD,USDC,USDP,USDT))'''
+
 
 '''
 
@@ -48,7 +64,13 @@ USDP_Data = pd.read_csv(USDP)
 USDT_Data = pd.read_csv(USDT)
 '''
 
-AAPL_Data = pd.read_csv(AAPL)
+AMZN = Path.home() / 'CryptoAnalysis' / 'SP_500_Top_10_Data' / 'AMZN.csv'
+AMZN_Data = pd.read_csv(AMZN)
+print(AMZN_Data)
+'''AAPL_Data = pd.read_csv(AAPL)
+BRKB_Data = pd.read_csv(BRKC)
+print(AAPL_Data)
+print(BRKB_Data)'''
 
 '''AMZN_Data = pd.read_csv(AMZN)
 BRKB_Data = pd.read_csv(BRKB)
