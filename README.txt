@@ -39,3 +39,5 @@ Instructions:
 1. Ensure all dependencies are installed correctly and Python 3.7, 3.8, 3.9 or 3.10 is the interpreter.
 2. If PyPortfolioOpt is not installed use "py -3.10 -m pip install PyPortfolioOpt --use-pep517". Install Cmake and pulp if necessary.
 3. Run main.py
+4. Only run datacleanup.py when inputting new different historical data. Running datacleanup.py will always require you to convert ticker
+    symbols in SP_500_Agg_Data.csv and Stablecoin_Agg_Data.csv to numbers 0-9 and the missing first index to 'index'.
