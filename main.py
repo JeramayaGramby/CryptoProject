@@ -2,7 +2,6 @@
 import pandas as pd
 from pathlib import Path
 from pypfopt.efficient_frontier import EfficientFrontier
-from pypfopt.discrete_allocation import DiscreteAllocation
 from pypfopt import risk_models
 from pypfopt import expected_returns
 
