@@ -26,10 +26,8 @@ NVDA = Path.home() / 'CryptoAnalysis' / 'SP_500_Historical_Data' / 'NVDA.csv'
 TSLA = Path.home() / 'CryptoAnalysis' / 'SP_500_Historical_Data' / 'TSLA.csv'
 UNH = Path.home() / 'CryptoAnalysis' / 'SP_500_Historical_Data' / 'UNH.csv'
 
-SP_500_List = list([AAPL,AMZN,BRKB,GOOG,GOOGL,META,MSFT,NVDA,TSLA,UNH])
-Stablecoin_List = list([DAI,DGD,GUSD,SBD,SHX,SUSD,TUSD,USDC,USDP,USDT])
 
-'''Left Joining each CSV file by asset type and converting the dataframes to annualized daily simple returns'''
+'''Left Joining each CSV file and converting the dataframes to annualized daily simple returns'''
 class data_processor:
     def SP_500():
         AAPL_Table = pd.read_csv(AAPL).loc[:, ["Date","AAPL"]]
