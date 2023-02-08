@@ -8,7 +8,7 @@
 -Link to my Medium article that contains a more detailed explanation.<br><br> 
 
 
-                             Project Purpose:
+                                                Project Purpose:
 
 The purpose of this project is to compare the performance of a stablecoin portfolio consisting of the most liquid 
 stablecoin blockchain assets to the performance of the highest weighted companies in the S&P 500 by performing 
@@ -23,7 +23,7 @@ Liquidity, measured in 24 hour trading volume and market capitalization, is pref
 project because high liquidity assumes the highest demand and financial support from the community when compared to 
 its peers.  <br><br>
 
-                                 Weaknesses:
+                                                    Weaknesses:
 
 This project has a many shortcomings. First off, the pyportfolioopt module DOES NOT support Python 3.11 as of January 8, 2023 
 so 3.7-3.10 must be the configured interpreter. 
@@ -40,7 +40,7 @@ Volatility ratio analysis and dividend returns were not considered in the S&P 50
 Both volatility and dividend returns influence total returns and could have impacted the assets analyzed for the project. 
  <br><br>
 
-                                Instructions:
+                                                    Instructions:
 
 1. Ensure all dependencies are installed correctly and Python 3.7, 3.8, 3.9 or 3.10 is the interpreter.
 
@@ -54,9 +54,9 @@ Both volatility and dividend returns influence total returns and could have impa
 
 <br>
 
-                        Medium Article Link and Photos:      
+                                            Medium Article Link and Photos:      
 https://medium.com/@jeramayagramby/can-crypto-outperform-the-s-p-500-f0af11e6f3c9
 
 
 ![article](photos/article.png)
-![code](photos/results.png)
+![code](photos/results.png) 
