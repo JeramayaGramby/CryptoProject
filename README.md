@@ -59,4 +59,4 @@ https://medium.com/@jeramayagramby/can-crypto-outperform-the-s-p-500-f0af11e6f3c
 
 
 ![article](photos/article.png)
-![code](photos/results.png)
+![code](photos/results.png) 
